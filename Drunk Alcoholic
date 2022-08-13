@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,k,i;
+	int j;
+	int total;
+	cin>>t;
+	for(i=0;i<t;i++){
+	    cin>>k;
+	   total=1;
+	    for(j=0;j<=k;j++){
+	        if(j%2==0){
+	            total=total-1;
+	        }
+	        else{
+	            total=total+3;
+	        }
+	      
+	    }
+	    cout<<total<<endl;
+	}
+	return 0;
+}
