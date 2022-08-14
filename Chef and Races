@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,x,y,a,b,score;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    cin>>x>>y>>a>>b;
+	    if((x==a || x==b) && (y==a || y==b)){
+	        score=0;
+	    }
+	        
+	    else if((x==a || x==b) || (y==a || y==b)){
+	            score=1;
+	        }
+	     else{
+	            score=2;
+	        }
+	    
+	    cout<<score<<endl;
+	}
+	return 0;
+}
