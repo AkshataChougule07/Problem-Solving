@@ -1,0 +1,62 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,a,b,s,d,c;
+
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    cin>>a>>b;
+	    s=0;
+	    s=a+b;
+	    int sum=s;
+	    c=0;
+	    while(sum!=0){
+	    	sum=sum/10;
+	    	++c;
+		}
+		//cout<<"s:"<<s<<"sum:"<<sum<<"c:"<<c;
+		
+	    int arr[c];
+	    int j=0;
+	    //digit seperation
+	    while(s!=0){
+	        d=s%10;
+	        arr[j++]=d;
+	        s=s/10;
+	    }
+	    int match;
+	    match=0;
+	    //detecting patterns required
+	    for(int i=0;i<c;i++){
+	    	
+	    	switch(arr[i]){
+	    		case 1:
+	    			match=match+2;
+	    			break;
+	    		case 7:
+	    			match=match+3;
+	    			break;
+	    		case 4:
+	    			match=match+4;
+	    			break;
+	    		case 2:
+				case 3:
+				case 5:
+					match=match+5;
+					break;
+				case 0:
+				case 6:
+				case 9:
+					match=match+6;
+					break;
+				case 8:
+					match=match+7;
+				
+			}
+		}
+		cout<<match<<endl;
+	}
+	return 0;
+}
