@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int t,d,ds,a,b,c;
+	cin>>t;
+	for(int i=0;i<t;i++){
+	    cin>>d>>ds>>a>>b>>c;
+	    int first=10,second=21,third=42;
+	    int total=d*ds;
+	  
+	   if(total>=first && total<second){
+	        cout<<a<<endl;
+	    }
+	    else if(total>=second && total<third){
+	        cout<<b<<endl;
+	    }
+	    else if(total>=third){
+	        cout<<c<<endl;
+	    }
+	    else{
+	        cout<<"0"<<endl;
+	    }
+	}
+	return 0;
+}
